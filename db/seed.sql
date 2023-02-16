@@ -23,7 +23,7 @@ INSERT INTO sites(name , website, address, description, price, category, picture
  'Health and wellness center influenced by pop and hip-hop created for accessibility and inclusiveness for the Black community', 
 
  'Membership',
- 
+
  'health-fitness',
 
-  'https://andscape.com/wp-content/uploads/2018/03/spiked-spin-4.jpg?w=700')
+  'https://andscape.com/wp-content/uploads/2018/03/spiked-spin-4.jpg?w=700');
