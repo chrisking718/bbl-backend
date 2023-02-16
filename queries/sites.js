@@ -20,8 +20,8 @@ const getSite = async (id) =>{
 
 const createSite = async (site) =>{
     try{
-        const newSite = await db.one('INSERT INTO sites(name , website, address, description, price, picture ) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *',[
-            site.name, site.website, site.description, site.address, site.price, site.picture
+        const newSite = await db.one('INSERT INTO sites(name , website, address, description, price, category, picture ) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',[
+            site.name, site.website, site.address, site.description, site.price, site.category, site.picture
         ])
         return newSite
     }catch (e){
@@ -40,8 +40,8 @@ const deleteSite = async (id) => {
 
 const updateSite = async(id,site) => {
     try{
-        const updatedSite = await db.one('UPDATE sites SET name=$1 , website=$2, address=$3, description=$4, price=$5, picture=$6 WHERE id=$7 RETURNING * ',[
-            site.name, site.website, site.description, site.address, site.price, site.picture, id
+        const updatedSite = await db.one('UPDATE sites SET name=$1 , website=$2, address=$3, description=$4, price=$5, category=$6, picture=$7 WHERE id=$8 RETURNING * ',[
+            site.name, site.website,site.address, site.description,  site.price, site.category, site.picture, id
         ])
         return updatedSite
     }catch (e){

@@ -18,7 +18,7 @@ sites.get("/", async (req , res) => {
  sites.get("/:id", async (req,res)=>{
     const {id} = req.params
     const site = await getSite(id)
-    if(site.description){
+    if(site.name){
         res.json(site)
     }else{
         res.status(404).json({error: "not found"})
@@ -39,7 +39,7 @@ sites.delete('/:id', async (req,res) =>{
     const {id} = req.params
     const deletedSites = await deleteSite(id)
     if(deletedSites.id){
-        res.status(200).json(deletedSnacks)
+        res.status(200).json(deletedSites)
     }else{
         res.status(404).json({error: "Sites not found"})
     }

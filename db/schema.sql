@@ -12,5 +12,6 @@ website TEXT NOT NULL,
 address TEXT,
 description TEXT,
 price TEXT,
+category TEXT,
 picture TEXT DEFAULT'https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image'
 );
